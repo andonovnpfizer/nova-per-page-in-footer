@@ -78,26 +78,26 @@
       </button>
     </div>
 
-    <div
-      v-if="!tableComponent.disablePagination && !tableComponent.viaRelationship"
-      class="ml-auto flex items-center"
-    >
-      <span class="lowercase text-xs">Per page:</span>
-      <select
-        :value="currentPerPage"
-        @change="tableComponent.updatePerPageChanged($event.target.value)"
-        class="ml-1 block form-control form-select form-control-sm form-select-bordered"
+    <div class="ml-auto flex items-center">
+      <div
+        v-if="!tableComponent.disablePagination && !tableComponent.viaRelationship"
+        class="flex items-center"
       >
-        <option
-          v-for="page in perPageOptions"
-          :key="page"
-          :value="page"
-          v-text="page"
-        ></option>
-      </select>
-    </div>
+        <span class="lowercase text-xs">Per page:</span>
+        <select
+          :value="currentPerPage"
+          @change="tableComponent.updatePerPageChanged($event.target.value)"
+          class="ml-1 block form-control form-select form-control-sm form-select-bordered"
+        >
+          <option
+            v-for="page in perPageOptions"
+            :key="page"
+            :value="page"
+            v-text="page"
+          ></option>
+        </select>
+      </div>
 
-    <div>
       <slot />
     </div>
   </nav>
