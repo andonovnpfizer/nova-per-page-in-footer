@@ -1,6 +1,6 @@
 <?php
 
-namespace NewtonConsole\Pagination;
+namespace Andonovnpfizer\NovaPerPageInFooter;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -21,8 +21,8 @@ class ToolServiceProvider extends ServiceProvider
         });
 
         Nova::serving(function (ServingNova $event) {
-            Nova::script('pagination', __DIR__.'/../dist/js/tool.js');
-            Nova::style('pagination', __DIR__.'/../dist/css/tool.css');
+            Nova::script('nova-per-page-in-footer', __DIR__.'/../dist/js/tool.js');
+            Nova::style('nova-per-page-in-footer', __DIR__.'/../dist/css/tool.css');
         });
     }
 
@@ -38,7 +38,7 @@ class ToolServiceProvider extends ServiceProvider
         }
 
         Route::middleware(['nova'])
-                ->prefix('nova-vendor/pagination')
+                ->prefix('nova-vendor/nova-per-page-in-footer')
                 ->group(__DIR__.'/../routes/api.php');
     }
 

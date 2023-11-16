@@ -1,5 +1,5 @@
 {
-    "name": "newton-console/pagination",
+    "name": "andonovnpfizer/nova-per-page-in-footer",
     "description": "A Laravel Nova resource tool.",
     "keywords": [
         "laravel",
@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "NewtonConsole\\Pagination\\": "src/"
+            "Andonovnpfizer\\NovaPerPageInFooter\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "NewtonConsole\\Pagination\\ToolServiceProvider"
+                "Andonovnpfizer\\NovaPerPageInFooter\\ToolServiceProvider"
             ]
         }
     },

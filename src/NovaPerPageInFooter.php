@@ -1,10 +1,10 @@
 <?php
 
-namespace NewtonConsole\Pagination;
+namespace Andonovnpfizer\NovaPerPageInFooter;
 
 use Laravel\Nova\ResourceTool;
 
-class Pagination extends ResourceTool
+class NovaPerPageInFooter extends ResourceTool
 {
     /**
      * Get the displayable name of the resource tool.
@@ -13,7 +13,7 @@ class Pagination extends ResourceTool
      */
     public function name()
     {
-        return 'Pagination';
+        return 'NovaPerPageInFooter';
     }
 
     /**
@@ -23,6 +23,6 @@ class Pagination extends ResourceTool
      */
     public function component()
     {
-        return 'pagination';
+        return 'nova-per-page-in-footer';
     }
 }
