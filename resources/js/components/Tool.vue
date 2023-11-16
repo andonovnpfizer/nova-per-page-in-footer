@@ -78,7 +78,10 @@
       </button>
     </div>
 
-    <div class="ml-auto flex items-center">
+    <div
+      v-if="!tableComponent.disablePagination && !tableComponent.viaRelationship"
+      class="ml-auto flex items-center"
+    >
       <span class="lowercase text-xs">Per page:</span>
       <select
         :value="currentPerPage"
