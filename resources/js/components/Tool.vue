@@ -84,6 +84,7 @@
         class="flex items-center"
       >
         <span class="lowercase text-xs">Per page:</span>
+
         <select
           :value="currentPerPage"
           @change="tableComponent.updatePerPageChanged($event.target.value)"
